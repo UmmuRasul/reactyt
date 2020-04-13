@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Header(){
-  const date = new Date()
+  const date = new Date(2019, 6, 8, 15)
   const hours = date.getHours()
   let timeofDay
 

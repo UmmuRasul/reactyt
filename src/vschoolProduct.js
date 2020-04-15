@@ -36,4 +36,4 @@ const products = [
     description:"Perfect for thghjhose who can't remember"
   }
 ]
-export default products
+export default products;

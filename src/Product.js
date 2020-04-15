@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function Product(props){
   return (
@@ -9,4 +9,4 @@ function Product(props){
     </div>
   )
 }
-export default Product
+export default Product;

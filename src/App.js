@@ -1,22 +1,14 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-//import TodoItem from './TodoItem';
+import jokesData from './jokeData';
 import Joke from './Joke';
 
 function App() {
-  const nums = [1,2,3,4,5,6,7,8,9,10]
-  const double = nums.map(function(num) {
-    return num * 2
-  })
-  console.log(double)
+const jokeComponents = jokesData.map(joke => <Joke key={joke.id} question={joke.question} punchline={joke.punchline}/>)
   return (
     <div className="joke">
-    <Joke punchline="It's hard to explain"/>
-    <Joke question="the things to remember" punchline="It's hard to explain"/>
-    <Joke question="the things to remember" punchline="It's hard to explain"/>
-    <Joke question="the things to remember" punchline="It's hard to explain"/>
-    <Joke question="the things to remember" punchline="It's hard to explain"/>
+      {jokeComponents}
     </div>
   )
 }

@@ -1,16 +1,22 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TodoItem from 'TodoItem';
-import todosData from './todosData';
 
-function App() {
-  const todoItems = todosData.map(item => <TodoItem key={item.id} item=(item)/>)
-return(
-  <div className="todo-list">
-  {todoItems}
-  </div>
+class App extends React.Component {
+constructor(){
+  super()
+  this.state = {
+    answer: "yes"
+  }
+}
+render(){
+  return(
+    <div>
+      <h1>is state important? {this.state.answer}</h1>
+      <ChildComponent answer{this.state.answer}/>
+    </div>
 )
+}
 }
 
 export default App;

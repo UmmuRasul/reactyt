@@ -1,3 +1,4 @@
+import React from 'react';
 import FormContainer from './FormContainer'
 
 function FormComponent(props){
@@ -6,7 +7,7 @@ function FormComponent(props){
       <form>
         <input
           name="firstName"
-          value="{this.data.firstName}"
+          value="{props.data.firstName}"
           onChange={props.handleChange}
           placeholder="First Name"
         />
@@ -15,7 +16,7 @@ function FormComponent(props){
 
         <input
           name="lastName"
-          value="{this.state.lastName}"
+          value="{.lastName}"
           onChange={props.handleChange}
           placeholder="Last Name"
         />
@@ -23,7 +24,7 @@ function FormComponent(props){
         <br />
         <input
           name="age"
-          value="{this.state.age}"
+          value="{.age}"
           onChange={props.handleChange}
           placeholder="Age"
         />
@@ -50,7 +51,7 @@ function FormComponent(props){
         </label>
         <br />
         <select
-          value={this.state.destination}
+          value={.destination}
           name="destination"
           onChange={props.handleChange}
         >
@@ -67,7 +68,7 @@ function FormComponent(props){
           type="checkbox"
           name="isVegan"
           onChange={props.handleChange}
-          checked={this.state.isVegan}
+          checked={.isVegan}
         />Vegan
         </label>
 
@@ -77,7 +78,7 @@ function FormComponent(props){
           type="checkbox"
           name="isKosher"
           onChange={props.handleChange}
-          checked={this.state.isKosher}
+          checked={.isKosher}
         />Kosher
         </label>
 
@@ -86,7 +87,7 @@ function FormComponent(props){
           type="checkbox"
           name="isKosher"
           onChange={props.handleChange}
-          checked={this.state.isLoctoseFree}
+          checked={.isLoctoseFree}
         />Loctose Free
         </label>
         <br />
@@ -95,14 +96,14 @@ function FormComponent(props){
       </form>
       <hr />
       <h2>Enter Information below:</h2>
-      <p>Your Name: {this.state.firstName}{this.state.lastName}<p/>
-      <p>Your Age: {this.state.age}</p>
-      <p>Your Gender: {this.state.gender}</p>
-      <p>Your Destination: {this.state.destination}</p>
+      <p>Your Name: {.firstName}{.lastName}<p/>
+      <p>Your Age: {.age}</p>
+      <p>Your Gender: {.gender}</p>
+      <p>Your Destination: {.destination}</p>
       <p>Your dietary restrictions:</p>
-        <p>Vegan:{this.state.isVegan ? "Yes" : "No"}</p>
-        <p>Kosher:{this.state.isKosher ? "Yes" : "No"}</p>
-        <p>LoctoseFree:{this.state.isLoctoseFree ? "Yes" : "No"}</p>
+        <p>Vegan:{.isVegan ? "Yes" : "No"}</p>
+        <p>Kosher:{.isKosher ? "Yes" : "No"}</p>
+        <p>LoctoseFree:{.isLoctoseFree ? "Yes" : "No"}</p>
 
     </main>
   )

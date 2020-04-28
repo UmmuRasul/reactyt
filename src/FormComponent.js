@@ -16,7 +16,7 @@ function FormComponent(props){
 
         <input
           name="lastName"
-          value="{.lastName}"
+          value="{props.data.lastName}"
           onChange={props.handleChange}
           placeholder="Last Name"
         />
@@ -24,7 +24,7 @@ function FormComponent(props){
         <br />
         <input
           name="age"
-          value="{.age}"
+          value="{props.data.age}"
           onChange={props.handleChange}
           placeholder="Age"
         />
@@ -34,7 +34,7 @@ function FormComponent(props){
           type="radio"
           name="gender"
           value="male"
-          checked={this.stae.gender}
+          checked={props.data.gender}
           onChange={props.handleChange}
         />Male
         </label>
@@ -45,13 +45,13 @@ function FormComponent(props){
           type="radio"
           name="gender"
           value="female"
-          checked={this.stae.gender}
+          checked={props.data.gender}
           onChange={props.handleChange}
         />Female
         </label>
         <br />
         <select
-          value={.destination}
+          value={props.data.destination}
           name="destination"
           onChange={props.handleChange}
         >
@@ -68,7 +68,7 @@ function FormComponent(props){
           type="checkbox"
           name="isVegan"
           onChange={props.handleChange}
-          checked={.isVegan}
+          checked={props.data.isVegan}
         />Vegan
         </label>
 
@@ -78,7 +78,7 @@ function FormComponent(props){
           type="checkbox"
           name="isKosher"
           onChange={props.handleChange}
-          checked={.isKosher}
+          checked={props.data.isKosher}
         />Kosher
         </label>
 
@@ -87,7 +87,7 @@ function FormComponent(props){
           type="checkbox"
           name="isKosher"
           onChange={props.handleChange}
-          checked={.isLoctoseFree}
+          checked={props.data.isLoctoseFree}
         />Loctose Free
         </label>
         <br />
@@ -96,14 +96,14 @@ function FormComponent(props){
       </form>
       <hr />
       <h2>Enter Information below:</h2>
-      <p>Your Name: {.firstName}{.lastName}<p/>
-      <p>Your Age: {.age}</p>
-      <p>Your Gender: {.gender}</p>
-      <p>Your Destination: {.destination}</p>
+      <p>Your Name: {props.data.firstName}{this.state.lastName}<p/>
+      <p>Your Age: {props.data.age}</p>
+      <p>Your Gender: {props.data.gender}</p>
+      <p>Your Destination: {props.data.destination}</p>
       <p>Your dietary restrictions:</p>
-        <p>Vegan:{.isVegan ? "Yes" : "No"}</p>
-        <p>Kosher:{.isKosher ? "Yes" : "No"}</p>
-        <p>LoctoseFree:{.isLoctoseFree ? "Yes" : "No"}</p>
+        <p>Vegan:{props.data.isVegan ? "Yes" : "No"}</p>
+        <p>Kosher:{props.data.isKosher ? "Yes" : "No"}</p>
+        <p>LoctoseFree:{props.data.isLoctoseFree ? "Yes" : "No"}</p>
 
     </main>
   )
